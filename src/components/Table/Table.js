@@ -13,6 +13,7 @@ export default function Table() {
 
   const headings = (
     <tr>
+      <th></th>
       <th>#</th>
       <th>Name</th>
       <th>Games Played</th>
@@ -25,6 +26,9 @@ export default function Table() {
   const tableRows = sortedTeams.map((team, index) => {
     return (
       <tr key={index}>
+        <td>
+          <img src={`${team.team}.png`} alt={team.team} />
+        </td>
         <td>{index + 1}</td>
         <td>{team.name}</td>
         <td>{team.gamesPlayed}</td>

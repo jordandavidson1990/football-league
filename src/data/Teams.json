@@ -4,34 +4,39 @@
     "gamesPlayed": 0,
     "goalsFor": 0,
     "goalsAgainst": 0,
-    "points": 0
+    "points": 0,
+    "team": "arsenal"
   },
   {
     "name": "Adam",
     "gamesPlayed": 0,
     "goalsFor": 0,
     "goalsAgainst": 0,
-    "points": 0
+    "points": 0,
+    "team": "napoli"
   },
   {
     "name": "Sam",
     "gamesPlayed": 0,
     "goalsFor": 0,
     "goalsAgainst": 0,
-    "points": 10
+    "points": 10,
+    "team": "bayern"
   },
   {
     "name": "Jamie",
     "gamesPlayed": 0,
     "goalsFor": 0,
     "goalsAgainst": 0,
-    "points": 0
+    "points": 0,
+    "team": "dortmund"
   },
   {
     "name": "Gerry",
     "gamesPlayed": 0,
     "goalsFor": 0,
     "goalsAgainst": 0,
-    "points": 0
+    "points": 0,
+    "team": "manutd"
   }
 ]
