@@ -1,14 +1,18 @@
 import React from "react";
 import { Header, Table, Fixtures } from "./components";
 import "./App.css";
+import { createProvider } from "./components/context/context";
 
+const Provider = createProvider({});
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Table />
-      <Fixtures />
-    </div>
+    <Provider>
+      <div className="App">
+        <Header />
+        <Table />
+        <Fixtures />
+      </div>
+    </Provider>
   );
 }
 

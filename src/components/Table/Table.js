@@ -1,9 +1,12 @@
 import React from "react";
-import teams from "../../data/Teams.json";
 import "./Table.css";
+import { useSelector } from "../context/context";
 
 export default function Table() {
-  const sortedTeams = teams.sort(function (a, b) {
+  const { players } = useSelector((state) => state);
+
+  console.log(players);
+  const sortedTeams = players.sort(function (a, b) {
     return b.points - a.points;
   });
 
