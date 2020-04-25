@@ -26,4 +26,9 @@ export default {
   getFixtures() {
     return fetch(fixtureUrl).then((res) => res.json());
   },
+  deleteFixture(id) {
+    return fetch(fixtureUrl + id, {
+      method: "DELETE",
+    });
+  },
 };

@@ -8,7 +8,6 @@ export default function reducer(state, action) {
         goalsFor: action.data.player.goalsFor,
         goalsAgainst: action.data.player.goalsAgainst,
       };
-
     default:
       return {
         state,

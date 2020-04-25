@@ -91,6 +91,7 @@ export default function Fixture({ fixture, folks }) {
         },
       });
     }
+    requests.deleteFixture(fixture._id);
   }
   return (
     <div className={showFixture ? null : "hide-fixture"}>

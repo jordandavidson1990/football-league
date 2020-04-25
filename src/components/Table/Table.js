@@ -1,16 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useSelector } from "../context/context";
-import requests from "../api/requests";
+
 import "./Table.css";
 
 export default function Table({ folks }) {
   const { players } = useSelector((state) => state);
-  // const [folks, setFolks] = useState([]);
-
-  // useEffect(() => {
-  //   requests.getPlayers().then((players) => setFolks(players));
-  // }, []);
-
   const sortedGoalDifference = folks.sort(function (a, b) {
     return b.goalsFor - b.goalsAgainst - (a.goalsFor - a.goalsAgainst);
   });
