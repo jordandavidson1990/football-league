@@ -6,7 +6,6 @@ import "./Fixtures.css";
 
 export default function Fixtures() {
   const [fixtures, setFixtures] = useState([]);
-  const [score, setScore] = useState([]);
 
   useEffect(() => {
     getFixtures();

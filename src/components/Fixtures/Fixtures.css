@@ -10,3 +10,7 @@ img {
 input {
   width: 10vw;
 }
+
+.hide-fixture {
+  display: none;
+}

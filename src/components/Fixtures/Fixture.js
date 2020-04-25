@@ -1,10 +1,11 @@
-import React from "react";
-import { useDispatch, useSelector } from "../context/context";
+import React, { useState } from "react";
+import { useDispatch } from "../context/context";
 
 export default function Fixture({ fixture }) {
+  const [showFixture, setShowFixture] = useState(true);
   const dispatch = useDispatch();
-  const { players } = useSelector((state) => state);
   function handleSubmit(event) {
+    setShowFixture(false);
     event.preventDefault();
 
     let homeTeam = fixture[0];
@@ -62,23 +63,23 @@ export default function Fixture({ fixture }) {
         },
       });
     }
-    console.log("homeTeamAfter:", homeTeam);
-    console.log("awayTeamAfter:", awayTeam);
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name1">
-        <img src={`${fixture[0].team}.png`} alt={fixture[0].team} />
-      </label>
-      <input name="name1" type="number" min={0} />
-      V
-      <input name="name2" type="number" min={0} />
-      <label htmlFor="name2">
-        <img src={`${fixture[1].team}.png`} alt={fixture[1].team} />
-      </label>
-      <br />
-      <input type="submit" value="Submit" />
-      <hr />
-    </form>
+    <div className={showFixture ? null : "hide-fixture"}>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name1">
+          <img src={`${fixture[0].team}.png`} alt={fixture[0].team} />
+        </label>
+        <input name="name1" type="number" min={0} />
+        V
+        <input name="name2" type="number" min={0} />
+        <label htmlFor="name2">
+          <img src={`${fixture[1].team}.png`} alt={fixture[1].team} />
+        </label>
+        <br />
+        <input type="submit" value="Submit" />
+        <hr />
+      </form>
+    </div>
   );
 }

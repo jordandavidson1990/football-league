@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useReducer, useState } from "react";
+import React, { useContext, createContext, useReducer } from "react";
 import players from "../../data/Teams.json";
 import reducer from "./reducer";
 

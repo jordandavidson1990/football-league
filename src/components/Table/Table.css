@@ -18,3 +18,7 @@ td,
 th {
   border-style: solid;
 }
+
+td {
+  height: 10vh;
+}

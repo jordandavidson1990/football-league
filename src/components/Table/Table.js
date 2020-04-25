@@ -1,12 +1,14 @@
 import React from "react";
-import "./Table.css";
 import { useSelector } from "../context/context";
+import "./Table.css";
 
 export default function Table() {
   const { players } = useSelector((state) => state);
+  const sortedGoalDifference = players.sort(function (a, b) {
+    return b.goalsFor - b.goalsAgainst - (a.goalsFor - a.goalsAgainst);
+  });
 
-  console.log(players);
-  const sortedTeams = players.sort(function (a, b) {
+  const sortedTeams = sortedGoalDifference.sort(function (a, b) {
     return b.points - a.points;
   });
 
